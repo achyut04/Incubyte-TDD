@@ -6,8 +6,16 @@ function Add(input) {
 
   if (input.startsWith("//")) {
     const delimiterEndIndex = input.indexOf("\n");
-    delimiter = input.substring(2, delimiterEndIndex);
+    let delimiterSection = input.substring(2, delimiterEndIndex);
     nums = input.substring(delimiterEndIndex + 1);
+
+    if(delimiterSection.startsWith('[')){
+        const actualDelimiter = delimiterSection.slice(1,-1);
+        delimiter = new RegExp(actualDelimiter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    }
+    else{
+        delimiter = delimiterSection;
+    }
   }
 
   let values = nums.split(delimiter).filter(v => v <= 1000).map(Number);
