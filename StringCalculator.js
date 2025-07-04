@@ -10,7 +10,7 @@ function Add(input) {
     nums = input.substring(delimiterEndIndex + 1);
   }
 
-  let values = nums.split(delimiter).map(Number);
+  let values = nums.split(delimiter).filter(v => v <= 1000).map(Number);
   const negatives = values.filter((v) => v < 0);
 
   if (negatives.length > 0)
