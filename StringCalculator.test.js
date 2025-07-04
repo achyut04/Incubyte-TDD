@@ -30,5 +30,5 @@ test("returns the sum of numbers delimited by custom delimiter", () => {
 });
 
 test("throws exception when negative numbers are used", () => {
-    expect(Add("1,-2,6,-8")).toThrow("Negatives not allowed : -2,-8");
+    expect(() => Add("1,-2,6,-8")).toThrow("Negatives not allowed: -2,-8");
 });
