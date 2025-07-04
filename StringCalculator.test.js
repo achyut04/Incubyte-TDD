@@ -37,3 +37,7 @@ test("returns the sum of numbers that are less than or equal to 1000", () => {
     expect(Add("2,1001")).toBe(2);
     expect(Add("//#\n55#5555")).toBe(55);
 });
+
+test("returns the sum of numbers seperated by delimiters of any type", () => {
+    expect(Add("//[***]\n1***2***3")).toBe(6);
+});
