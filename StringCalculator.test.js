@@ -22,3 +22,9 @@ test("returns the sum of numbers seperated by newlines", () => {
     expect(Add("1\n2")).toBe(3);
     expect(Add("1\n11\n21")).toBe(33);
 });
+
+
+test("returns the sum of numbers delimited by custom delimiter", () => {
+    expect(Add("//;1;2;3")).toBe(6);
+    expect(Add("//.1.5.7")).toBe(13);
+});
