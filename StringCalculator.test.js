@@ -28,3 +28,7 @@ test("returns the sum of numbers delimited by custom delimiter", () => {
     expect(Add("//;\n1;2;3")).toBe(6);
     expect(Add("//.\n1.5.7")).toBe(13);
 });
+
+test("throws exception when negative numbers are used", () => {
+    expect(Add("1,-2,6,-8")).toThrow("Negatives not allowed : -2,-8");
+});
