@@ -17,3 +17,8 @@ test("returns the sum of all the numbers in input", () => {
     expect(Add("1,2,3")).toBe(6);
     expect(Add("5,7,12")).toBe(24);
 })
+
+test("returns the sum of numbers seperated by newlines", () => {
+    expect(Add("1\n2")).toBe(3);
+    expect(Add("1\n11\n21")).toBe(33);
+});
