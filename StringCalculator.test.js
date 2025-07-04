@@ -12,3 +12,8 @@ test("returns sum of 2 numbers for 2 comma separated numbers in input", () => {
     expect(Add("1,2")).toBe(3);
     expect(Add("5,7")).toBe(12);
 });
+
+test("returns the sum of all the numbers in input", () => {
+    expect(Add("1,2,3")).toBe(6);
+    expect(Add("5,7,12")).toBe(24);
+})
