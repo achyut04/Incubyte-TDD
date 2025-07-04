@@ -1,7 +1,14 @@
 function Add(numbers){
     if(numbers == "")
         return 0;
-    return 1;
+    let values = numbers.split(",");
+    const sum = values.reduce((total, val) => {
+        return total + parseInt(val);
+    }, 0);
+
+    if(values.length === 0) return parseInt(numbers);
+
+    return sum;
 }
 
 module.exports = Add;
