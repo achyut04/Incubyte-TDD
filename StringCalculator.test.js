@@ -1,3 +1,5 @@
-test('returns 0 for an empty string', () => {
-    expect(Add("")).toBe(0);
+const Add = require('./StringCalculator');
+
+test("returns 0 for an empty string", () => {
+  expect(Add("")).toBe(0);
 });
