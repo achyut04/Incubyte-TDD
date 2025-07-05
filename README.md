@@ -82,7 +82,7 @@ test("returns the sum with multiple delimiters of any length", () => {
 
 
 ### Test Results
-![Test Results](/screenshots/test-results.png?raw=true "Optional Title")
+![Test Results](/screenshots/test-results.png?raw=true "Test Results")
 
 
 ## 🛠️ How to Run
